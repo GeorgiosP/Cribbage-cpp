@@ -3,7 +3,7 @@
 -------
 
 Cribbage game made in c++
-Assignment at Georgian College, Introduction To C++ 
+Assignment 3/4 Introduction To C++ 
 
 ### Developers
 ----
