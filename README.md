@@ -10,7 +10,7 @@ Assignment 3/4 Introduction To C++
 * Georgios Psarakis
   * [GitHub Link](https://github.com/GeorgiosP)
 * Raymond Dinkin
-  * [GitHub Link](https://github.com/theapprenticewizard)
+  * [GitHub Link](https://github.com/Rayd3900)
 
 ### License 
 ---- 
