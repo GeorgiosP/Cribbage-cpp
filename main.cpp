@@ -9,13 +9,8 @@ using namespace std;
 
 int main() 
 {
-    Suit suit = CLUBS;
-
-    if(suit == CLUBS)
-    {
-        cout << "♠" << endl;
-    }
-
-    cout << "Tried and Failed to split up project into subdirectories" << endl;
+    Card card = Card(CLUBS, 7); // create a 7 of clubs
+    card.Display();
+    cout << endl;
     return 0;
 }
