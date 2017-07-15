@@ -9,6 +9,6 @@ using namespace std;
 
 int main() 
 {
-    cout << "New Classes Added" << endl;
+    cout << "Tried and Failed to split up project into subdirectories" << endl;
     return 0;
 }
