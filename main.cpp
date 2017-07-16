@@ -9,7 +9,7 @@ using namespace std;
 
 int main() 
 {
-    Card card = Card(CLUBS, 7); // create a 7 of clubs
+    Card card = Card(CLUBS, Card::KING); // create a 7 of clubs
     card.Display();
     cout << endl;
     return 0;
