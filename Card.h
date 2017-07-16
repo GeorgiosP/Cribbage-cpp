@@ -2,6 +2,8 @@
 #include <string>
 #include <iostream>
 
+#include "FileReader.h"
+
 enum Suit
 {
     SPADES, 
@@ -17,10 +19,11 @@ class Card
         int value;
     public:
         Card();
-        Card(Suit, int);
-        void SetSuit(Suit);
+        Card(int _value, Suit _suit);
         void SetValue(int);
+        void SetSuit(Suit);
         void Display();
+        void DisplayASCII();
         static const int JACK = 11;
         static const int KING = 12;
         static const int QUEEN = 13; 

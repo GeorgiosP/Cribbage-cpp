@@ -6,10 +6,10 @@ Card::Card()
     // do nothing
 }
 
-Card::Card(Suit _suit, int _value)
+Card::Card(int _value, Suit _suit)
 {
-    Card::suit = _suit;
     Card::value = _value;
+    Card::suit = _suit;
 }
 
 void Card::SetSuit(Suit _suit)
@@ -24,32 +24,33 @@ void Card::SetValue(int _value)
 
 void Card::Display()
 {
-    std::string s = "";
     switch(value)
     {
-        case JACK: s += "J";
+        case JACK: std::cout << "J";
             break;
-        case KING: s += "K";
+        case KING: std::cout << "K";
             break;
-        case QUEEN: s += "Q";
+        case QUEEN: std::cout << "Q";
             break;
-        case ACE: s += "A";
-
-        default: s += Card::value;
+        case ACE: std::cout << "A";
             break;
+        default: std::cout << Card::value;
     }
 
     switch(suit)
     {
-        case CLUBS: s += "♠";
+        case CLUBS: std::cout << "♠";
             break;
-        case SPADES: s += "♠";
+        case SPADES: std::cout << "♠";
             break;
-        case HEARTS: s += "♥";
+        case HEARTS: std::cout << "♥";
             break;
-        case DIAMONDS: s += "♦";
+        case DIAMONDS: std::cout << "♦";
             break;
-    }
-    
-    std::cout << s;
+    };
+}
+
+void Card::DisplayASCII()
+{
+    std::cout << "testing";
 }

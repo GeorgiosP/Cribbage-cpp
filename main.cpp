@@ -1,17 +1,17 @@
 #include <iostream>
 #include <string>
+#include <algorithm> // for later std::swap(a[0], a[1]) use
 
 #include "Deck.h"
 #include "Card.h"
 #include "Game.h"
-#include "FileReader.h"
 
 using namespace std;
 
 int main() 
 {
-    Card card = Card(CLUBS, Card::KING); // create a 7 of clubs
-    card.Display();
+    Card card = Card(Card::KING, DIAMONDS);
+    card.DisplayASCII();
     cout << endl;
     return 0;
 }
