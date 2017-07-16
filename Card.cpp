@@ -1,9 +1,24 @@
 #include "Card.h"
 
-Card::Card(Suit card_suit, int card_value)
+Card::Card()
 {
-    Card::suit = card_suit;
-    Card::value = card_value;
+    // do nothing
+}
+
+Card::Card(Suit _suit, int _value)
+{
+    Card::suit = _suit;
+    Card::value = _value;
+}
+
+void Card::SetSuit(Suit _suit)
+{
+    suit = _suit;
+}
+
+void Card::SetValue(int _value)
+{
+    value = _value;
 }
 
 void Card::Display()

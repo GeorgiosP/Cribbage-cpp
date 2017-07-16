@@ -16,6 +16,13 @@ class Card
         Suit suit;
         int value;
     public:
+        Card();
         Card(Suit, int);
+        void SetSuit(Suit);
+        void SetValue(int);
         void Display();
+        static const int JACK = 11;
+        static const int KING = 12;
+        static const int QUEEN = 13; 
+        static const int ACE = 14;
 };
