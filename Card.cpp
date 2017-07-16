@@ -52,6 +52,7 @@ void Card::Display()
 
 void Card::DisplayASCII()   
 {
+    std::map<char, char> to_replace = std::map<char, char>();
     FileReader fr = FileReader();
-    std::cout << fr.ReadFile("card-back.txt");
+    std::cout << fr.ReadFileWithReplace("card.txt", to_replace);
 }       

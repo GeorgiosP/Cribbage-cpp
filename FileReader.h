@@ -1,6 +1,7 @@
 #include <string>
 #include <fstream>
 #include <map>
+#include <algorithm>
 
 class FileReader
 {
