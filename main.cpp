@@ -4,6 +4,7 @@
 #include "Deck.h"
 #include "Card.h"
 #include "Game.h"
+#include "FileReader.h"
 
 using namespace std;
 
