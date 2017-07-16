@@ -1,17 +1,12 @@
 #include "FileReader.h"
 
-FileReader::FileReader(std::string _path)
-{
-    FileReader::path = _path;
-}
-
-std::string FileReader::ReadFile()
+std::string FileReader::ReadFile(const char* _path)
 {
     std::ifstream file;
     std::string line;
     std::string text;
 
-    file.open("card.txt");
+    file.open(_path);
 
     while (std::getline(file, line)) {
         text += line + "\n";
@@ -22,7 +17,9 @@ std::string FileReader::ReadFile()
     return text;
 }
 
-std::string FileReader::ReadFileWithReplace(std::map<char, char> _replacements)
+std::string FileReader::ReadFileWithReplace(const char* _path, std::map<char, char> _replacements)
 {
+    std::string result = ReadFile(_path);
+
     return "";
 }

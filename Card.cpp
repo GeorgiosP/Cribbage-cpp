@@ -50,7 +50,8 @@ void Card::Display()
     };
 }
 
-void Card::DisplayASCII()
+void Card::DisplayASCII()   
 {
-    std::cout << "testing";
-}
+    FileReader fr = FileReader();
+    std::cout << fr.ReadFile("card-back.txt");
+}       
