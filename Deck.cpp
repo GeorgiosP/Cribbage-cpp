@@ -2,7 +2,7 @@
 
 Deck::Deck()
 {
-    for (size_t i = 1; i <= 52; i++)
+    for (size_t i = 0; i < 52; i++)
     {
         cards.push_back(Card((i/4)+2, Suit(i%4)));
     }
