@@ -1,17 +1,5 @@
 #include "Card.h"
 
-
-Card::Card()
-{
-    // do nothing
-}
-
-Card::Card(int _value, Suit _suit)
-{
-    Card::value = _value;
-    Card::suit = _suit;
-}
-
 void Card::SetSuit(Suit _suit)
 {
     suit = _suit;
@@ -50,9 +38,15 @@ void Card::Display()
     };
 }
 
+/* NOTE: as std::replace() does not support ASCII characters of differing widths i.e. ♠, we will use the corresponding letter for each instead */
 void Card::DisplayASCII()   
 {
     std::map<char, char> to_replace = std::map<char, char>();
+    to_replace.insert(std::pair<char, char>('X', 'K'));
+    to_replace.insert(std::pair<char, char>('x', ' '));
+    to_replace.insert(std::pair<char, char>('Y', 'S'));
+
+
     FileReader fr = FileReader();
     std::cout << fr.ReadFileWithReplace("card.txt", to_replace);
 }       

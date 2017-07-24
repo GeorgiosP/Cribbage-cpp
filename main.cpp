@@ -10,7 +10,7 @@ using namespace std;
 
 int main() 
 {
-    Card card = Card(Card::KING, DIAMONDS);
+    Card card = *new Card(Card::KING, DIAMONDS);
     card.DisplayASCII();
     cout << endl;
     return 0;
