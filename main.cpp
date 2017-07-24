@@ -10,8 +10,8 @@ using namespace std;
 
 int main() 
 {
-    Card card = *new Card(Card::KING, DIAMONDS);
-    card.DisplayASCII();
+    Deck deck = *new Deck();
+    deck.Display();
     cout << endl;
     return 0;
 }

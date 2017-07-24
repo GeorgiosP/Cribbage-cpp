@@ -1,4 +1,6 @@
 // Get UNICODE DATA FROM WIKIPEDIA: https://en.wikipedia.org/wiki/Playing_cards_in_Unicode
+#ifndef CARD 
+#define CARD
 #include <string>
 #include <iostream>
 #include <map>
@@ -32,3 +34,4 @@ class Card
         static const int QUEEN = 13;
         static const int ACE = 14;
 };
+#endif // CARD
