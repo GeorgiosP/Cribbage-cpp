@@ -23,12 +23,10 @@ class Card
         
     public:
         Card(int m_value, Suit m_suit) : value(m_value), suit(m_suit) {};
-        void SetValue(int);
-        void SetSuit(Suit);
         void Display();
         void DisplayASCII();
-        char GetSuitChar(Suit _suit);
-        std::string GetValueString(int _value);
+        Suit GetSuit();
+        int GetValue();
         static const int JACK = 11;
         static const int KING = 12;
         static const int QUEEN = 13;

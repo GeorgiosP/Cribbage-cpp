@@ -1,13 +1,13 @@
 #include "Card.h"
 
-void Card::SetSuit(Suit _suit)
+int Card::GetValue()
 {
-    suit = _suit;
+    return value;
 }
 
-void Card::SetValue(int _value)
+Suit Card::GetSuit()
 {
-    value = _value;
+    return suit;
 }
 
 void Card::Display()
