@@ -11,7 +11,7 @@ using namespace std;
 int main() 
 {
     Deck deck = *new Deck();
-    deck.Display();
+    deck.Display_Columned();
     cout << endl;
     
     cout << endl;
