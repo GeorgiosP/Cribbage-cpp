@@ -10,7 +10,14 @@ Deck::Deck()
 
 void Deck::Order()
 {
-    sort(cards.begin(), cards.end(), [](const Card& lhs, const Card& rhs){ return lhs.suit < rhs.suit || lhs.value < rhs.value; });
+    // this is a horrible abuse of lambda functions... but hopefully it works
+    sort(cards.begin(), cards.end(), [](const Card& lhs, const Card& rhs)
+    { 
+        if (lhs.suit == rhs.suit)
+            return lhs.value < rhs.value;
+
+        return lhs.suit < rhs.suit; 
+    });
 }
 
 void Deck::Display()
@@ -19,5 +26,12 @@ void Deck::Display()
     {
         card.Display();
         std::cout << " ";
+        if (card.value == Card::ACE)
+            std::cout << std::endl;
     }
 }
+
+void Deck::Shuffle() 
+{
+
+} 
