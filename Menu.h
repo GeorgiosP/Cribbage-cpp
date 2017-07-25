@@ -3,6 +3,7 @@
 
 #include <string>
 #include <vector>
+#include <iostream>
 
 using namespace std;
 
@@ -10,7 +11,6 @@ class IMenuItem
 {
     private:
         const string m_text;
-        const string m_use_key;
     public:
         IMenuItem(const char* text) : m_text(text){};
         virtual void Execute();
@@ -24,16 +24,30 @@ class ExitMenuItem : public IMenuItem
         void Execute();
 };
 
+class PrintFooMenuItem : public IMenuItem
+{
+    using IMenuItem::IMenuItem;
+
+    public:
+        void Execute();
+};
+
 class Menu 
 {
-    private:
+    protected:
         vector<IMenuItem> m_menu_items;
     public:
-        Menu() 
+        void Display();
+};
+
+class ProgramMenu : public Menu    
+{
+    public:
+        ProgramMenu() 
         {
+            m_menu_items.push_back(PrintFooMenuItem("Print Foo"));
             m_menu_items.push_back(ExitMenuItem("Exit"));
         }
-        void Display();
 };
 
 #endif
