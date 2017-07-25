@@ -53,7 +53,7 @@ void Deck::Shuffle()
 
 size_t Deck::RandomCard()
 {
-    return (rand() % 51);
+    return (rand() % (cards.size() -1));
 }
 
 void Deck::CutDeck()
