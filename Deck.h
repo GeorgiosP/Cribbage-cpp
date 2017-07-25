@@ -16,7 +16,7 @@ class Deck
         void DisplayColumned();
         void DisplayList();
         void Order();
-        Card RandomCard();
+        size_t RandomCard();
         void CutDeck();
 };
 #endif // DECK
