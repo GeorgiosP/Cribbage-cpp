@@ -30,7 +30,22 @@ void Deck::DisplayColumned()
     }
 }
 
+void Deck::DisplayList()
+{
+    for(Card card : cards)
+    {
+        card.Display();
+        std::cout << " ";
+    }
+}
+
 void Deck::Shuffle() 
 {
+    srand(time(NULL));
 
-} 
+
+    for (size_t i = 0; i < cards.size(); i++)
+    {
+        std::swap(cards[i], cards[rand() % 51]);
+    }
+}

@@ -3,6 +3,8 @@
 
 #include "Card.h"
 #include <vector>
+#include <time.h>
+#include <stdlib.h>
 
 class Deck
 {
@@ -12,6 +14,7 @@ class Deck
         Deck();
         void Shuffle();
         void DisplayColumned();
+        void DisplayList();
         void Order();
 };
 #endif // DECK

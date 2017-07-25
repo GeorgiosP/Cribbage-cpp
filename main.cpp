@@ -11,7 +11,10 @@ using namespace std;
 int main() 
 {
     Deck deck = *new Deck();
-    deck.DisplayColumned();
+    deck.DisplayList();
+    deck.Shuffle();
+    cout << endl;
+    deck.DisplayList();
     cout << endl;
     
     cout << endl;
