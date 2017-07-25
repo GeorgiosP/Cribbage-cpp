@@ -11,7 +11,7 @@ class Deck
     public:
         Deck();
         void Shuffle();
-        void Display_Columned();
+        void DisplayColumned();
         void Order();
 };
 #endif // DECK

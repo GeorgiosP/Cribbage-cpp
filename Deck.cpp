@@ -19,7 +19,7 @@ void Deck::Order()
     });
 }
 
-void Deck::Display_Columned()
+void Deck::DisplayColumned()
 {
     for(Card card : cards)
     {
@@ -32,5 +32,5 @@ void Deck::Display_Columned()
 
 void Deck::Shuffle() 
 {
-    
+
 } 
