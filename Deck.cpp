@@ -43,32 +43,22 @@ void Deck::DisplayList()
     std::cout << std::endl;
 }
 
+
+// test for reoccurence here http://www.somacon.com/p525.php
 void Deck::Shuffle() 
 {
     for (size_t i = 0; i < cards.size(); i++)
-    {
-        size_t random_location = rand() % 51;
-
-        if (random_location == i)
-        {
-            i--;
-        }
-        else
-        {
-            std::swap(cards[i], cards[rand() % 51]); 
-        }   
-    }
+        std::swap(cards[i], cards[RandomCard()]);
 }
 
-Card Deck::RandomCard()
+size_t Deck::RandomCard()
 {
-    return cards[rand() % 51];
+    return (rand() % 51);
 }
 
 void Deck::CutDeck()
 {
-    Card card = RandomCard();
-    card.Display();
+    cards[RandomCard()].Display();
     std::cout << std::endl;
 }
 

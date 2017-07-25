@@ -39,6 +39,7 @@
         "fstream": "cpp",
         "tuple": "cpp",
         "xmemory": "cpp",
-        "xtree": "cpp"
+        "xtree": "cpp",
+        "vector": "cpp"
     }
 }
