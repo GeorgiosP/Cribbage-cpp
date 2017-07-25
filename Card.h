@@ -28,6 +28,6 @@ class Card
         static const int JACK = 11;
         static const int KING = 12;
         static const int QUEEN = 13;
-        static const int ACE = 14;
+        static const int ACE = 1;
 };
 #endif // CARD
