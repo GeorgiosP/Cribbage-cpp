@@ -13,9 +13,13 @@ int main()
     Deck deck = *new Deck();
     deck.DisplayList();
     deck.Shuffle();
-    cout << endl;
     deck.DisplayList();
-    cout << endl;
+    deck.Shuffle();
+    deck.DisplayList();
+    deck.Shuffle();
+    deck.DisplayList();
+    deck.Shuffle();
+    deck.DisplayList();
     
     cout << endl;
     return 0;

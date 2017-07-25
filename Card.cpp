@@ -27,7 +27,7 @@ void Card::Display()
 
     switch(suit)
     {
-        case CLUBS: std::cout << "♠";
+        case CLUBS: std::cout << "♣";
             break;
         case SPADES: std::cout << "♠";
             break;
