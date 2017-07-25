@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include <algorithm> // for later std::swap(a[0], a[1]) use
+#include <algorithm>
 
 #include "Deck.h"
 #include "Card.h"
@@ -12,6 +12,18 @@ int main()
 {
     Deck deck = *new Deck();
     deck.Display();
+    cout << endl;
+    int numbers[] = {3, 7, 5, 8, 1, 2, 3};
+    for(int i : numbers)
+    {
+        cout << i << " ";
+    }
+    cout << endl;
+    sort(numbers, numbers + 7);
+    for(int i : numbers)
+    {
+        cout << i << " ";
+    }
     cout << endl;
     return 0;
 }
