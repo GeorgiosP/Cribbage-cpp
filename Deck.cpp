@@ -2,10 +2,11 @@
 
 Deck::Deck()
 {
+    srand(time(NULL));
+
     for (size_t i = 0; i < 52; i++)
         cards.push_back(Card((i/4)+1, Suit(i%4)));    
         
-    
     Order();
 }
 
@@ -44,9 +45,6 @@ void Deck::DisplayList()
 
 void Deck::Shuffle() 
 {
-    srand(time(NULL));
-
-
     for (size_t i = 0; i < cards.size(); i++)
     {
         size_t random_location = rand() % 51;
@@ -57,7 +55,20 @@ void Deck::Shuffle()
         }
         else
         {
-            std::swap(cards[i], cards[rand() % 51]); // bug detected, generates same number more than once when swapped with itself
+            std::swap(cards[i], cards[rand() % 51]); 
         }   
     }
 }
+
+Card Deck::RandomCard()
+{
+    return cards[rand() % 51];
+}
+
+void Deck::CutDeck()
+{
+    Card card = RandomCard();
+    card.Display();
+    std::cout << std::endl;
+}
+

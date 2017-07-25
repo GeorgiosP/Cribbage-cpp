@@ -21,6 +21,10 @@ int main()
     deck.Shuffle();
     deck.DisplayList();
     
+    deck.CutDeck();
+    deck.CutDeck();
+    deck.CutDeck();
+
     cout << endl;
     return 0;
 }
