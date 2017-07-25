@@ -17,11 +17,9 @@ enum Suit
 
 class Card
 {
-    private:
+    public:
         int value;
         Suit suit;
-        
-    public:
         Card(int m_value, Suit m_suit) : value(m_value), suit(m_suit) {};
         void Display();
         void DisplayASCII();

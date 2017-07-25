@@ -10,11 +10,11 @@ Deck::Deck()
 
 void Deck::Order()
 {
-    sort(cards.begin(), cards.end(), InCardOrder);
+    sort(cards.begin(), cards.end(), [](const Card& lhs, const Card& rhs){ return lhs.suit < rhs.suit || lhs.value < rhs.value; });
 }
 
 void Deck::Display()
-    {
+{
     for(Card card : cards)
     {
         card.Display();

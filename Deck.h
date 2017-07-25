@@ -8,7 +8,6 @@ class Deck
 {
     private:
         std::vector<Card> cards;
-        bool InCardOrder(const Card &lhs, const Card &rhs) { return lhs.GetSuit() > rhs.GetSuit(); }
     public:
         Deck();
         void Shuffle();
