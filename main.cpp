@@ -8,21 +8,9 @@
 
 using namespace std;
 
-int main() 
+int main()
 {
     Deck deck = *new Deck();
-    deck.DisplayList();
-    deck.Shuffle();
-    deck.DisplayList();
-    deck.Shuffle();
-    deck.DisplayList();
-    deck.Shuffle();
-    deck.DisplayList();
-    deck.Shuffle();
-    deck.DisplayList();
-    
-    deck.CutDeck();
-    deck.CutDeck();
-    deck.CutDeck();
+    deck.DisplayColumned();
     return 0;
 }
