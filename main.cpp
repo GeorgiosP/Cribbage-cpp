@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <algorithm>
+#include <regex>
 
 #include "Deck.h"
 #include "Card.h"
@@ -8,23 +9,13 @@
 
 using namespace std;
 
-int main() 
+int main()
 {
     Deck deck = *new Deck();
-    deck.DisplayList();
-    deck.Shuffle();
-    deck.DisplayList();
-    deck.Shuffle();
-    deck.DisplayList();
-    deck.Shuffle();
-    deck.DisplayList();
-    deck.Shuffle();
-    deck.DisplayList();
-    
-    deck.CutDeck();
-    deck.CutDeck();
-    deck.CutDeck();
+    deck.DisplayColumned();
 
-    cout << endl;
+    cout << "please type option to perform action" << endl;
+
+
     return 0;
 }

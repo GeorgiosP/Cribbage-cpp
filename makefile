@@ -2,8 +2,8 @@
 CC =g++
 CFLAGS =-c -Wall -std=c++11
 
-a.out: main.o Card.o Deck.o Game.o FileReader.o Menu.o Player.o
-	g++ main.o Card.o Deck.o Game.o FileReader.o Menu.o Player.o -o a.out
+a.out: main.o Card.o Deck.o Game.o FileReader.o Player.o
+	g++ main.o Card.o Deck.o Game.o FileReader.o Player.o -o a.out
 
 main.o: main.cpp
 	$(CC) $(CFLAGS) main.cpp
@@ -19,9 +19,6 @@ Game.o: Game.cpp Game.h
 
 FileReader.o: FileReader.h FileReader.cpp
 	$(CC) $(CFLAGS) FileReader.cpp
-
-Menu.o: Menu.h Menu.cpp
-	$(CC) $(CFLAGS) Menu.cpp
 
 Player.o: Player.h Player.cpp
 	$(CC) $(CFLAGS) Player.cpp

@@ -23,13 +23,17 @@ void Deck::Order()
 
 void Deck::DisplayColumned()
 {
-    for(Card card : cards)
+
+    for (size_t i = 0; i < cards.size(); i++)
     {
-        card.Display();
-        std::cout << " ";
-        if (card.value == Card::QUEEN)
+        if (i % 13 == 0)
             std::cout << std::endl;
+        
+        cards[i].Display();
+        std::cout << " ";
     }
+
+    std::cout << std::endl;
 }
 
 void Deck::DisplayList()
@@ -46,7 +50,7 @@ void Deck::DisplayList()
 
 // test for reoccurence here http://www.somacon.com/p525.php
 void Deck::Shuffle() 
-{
+{   
     for (size_t i = 0; i < cards.size(); i++)
         std::swap(cards[i], cards[RandomCard()]);
 }
