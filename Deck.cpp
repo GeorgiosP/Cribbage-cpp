@@ -71,5 +71,5 @@ Card Deck::Get(int index)
     if (index > 52 || index < 0)
         return cards[51];
 
-    return cards[i];
+    return cards[index];
 }
