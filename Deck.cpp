@@ -60,9 +60,16 @@ size_t Deck::RandomCard()
     return (rand() % (cards.size() -1));
 }
 
-void Deck::CutDeck()
+Card Deck::CutDeck()
 {
-    cards[RandomCard()].Display();
-    std::cout << std::endl;
+    return cards[RandomCard()];
 }
 
+// will return the nth card unless out of bounds, it will get the last card
+Card Deck::Get(int index)
+{
+    if (index > 52 || index < 0)
+        return cards[51];
+
+    return cards[i];
+}

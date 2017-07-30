@@ -26,6 +26,7 @@ bool print_play_menu(string input)
 {
     cout << "\nprint: Display the Deck" << endl;
     cout << "shuffle: Shuffle the Deck" << endl;
+    cout << "cut: cut deck";
     cout << "order: order the deck" << endl;
     cout << "play: Start a new game" << endl;
     cout << "exit: Exit the program" << endl;
@@ -38,6 +39,10 @@ bool print_play_menu(string input)
     else if(input == "shuffle")
     {
         deck.Shuffle();
+    }
+    else if(input == "cut")
+    {
+        deck.CutDeck().Display();
     }
     else if(input == "order")
     {
