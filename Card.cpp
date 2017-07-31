@@ -5,6 +5,14 @@ int Card::GetValue()
     return value;
 }
 
+int Card::GetPlayValue()
+{
+    if (value == JACK || value == KING || value == QUEEN)
+        return 10;
+    
+    return value;
+}
+
 Suit Card::GetSuit()
 {
     return suit;

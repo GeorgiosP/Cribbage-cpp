@@ -37,6 +37,7 @@ bool print_play_menu(string input)
     if (input == "print")
     {
         deck.DisplayColumned();
+        deck.Get(0).GetPlayValue();
     }
     else if(input == "shuffle")
     {

@@ -25,6 +25,7 @@ class Card
         void DisplayASCII();
         Suit GetSuit();
         int GetValue();
+        int GetPlayValue();
         static const int JACK = 11;
         static const int QUEEN = 12;
         static const int KING = 13;

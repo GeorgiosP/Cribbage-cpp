@@ -30,7 +30,7 @@ void Deck::DisplayColumned()
             std::cout << std::endl;
         
         cards[i].Display();
-        std::cout << " ";
+        std::cout << "\t";
     }
 
     std::cout << std::endl;
