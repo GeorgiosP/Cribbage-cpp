@@ -1,3 +1,6 @@
+#ifndef MAIN
+#define MAIN
+
 #include <iostream>
 #include <string>
 #include <algorithm>
@@ -72,3 +75,5 @@ bool print_play_menu(string input)
 
     return true;
 }
+
+#endif

@@ -16,9 +16,6 @@ struct Player
     bool dealer;
 };
 
-struct Player player1 = {};
-struct Player player2 = {};
-
 class Game
 {
     private:
