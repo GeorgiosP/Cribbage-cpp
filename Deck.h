@@ -17,6 +17,7 @@ class Deck
         void DisplayList();
         void Order();
         size_t RandomCard();
-        void CutDeck();
+        Card CutDeck();
+        Card Get(int index);
 };
 #endif // DECK

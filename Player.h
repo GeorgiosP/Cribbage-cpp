@@ -1,11 +1,5 @@
 #ifndef PLAYER
-#define PLAYER
+#define Player
 
-class Player 
-{
-    public:
-
-    private:
-};
 
 #endif
