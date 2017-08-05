@@ -45,21 +45,17 @@ bool print_play_menu(string input)
     else if(input == "shuffle")
     {
         deck.Shuffle();
-        system("reset");
     }
     else if(input == "cut")
     {
-        system("reset");
         deck.CutDeck().Display();
     }
     else if(input == "order")
     {
         deck.Order();
-        system("reset");
     }
     else if (input == "play")
     {
-        system("reset");
         Game game = *new Game();
         game.Start();
     }
@@ -69,7 +65,6 @@ bool print_play_menu(string input)
     }
     else 
     {
-        system("reset");
         cout << "\nplease enter a valid option";
     }
 

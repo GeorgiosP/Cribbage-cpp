@@ -3,24 +3,21 @@
 
 #include "Card.h"
 #include "Deck.h"
+#include "Player.h"
+
 #include <vector>
+#include <iostream>
 #include <string>
 
 using namespace std;
-
-struct Player
-{
-    string name;
-    Card hand[];
-    int points;
-    bool dealer;
-};
 
 class Game
 {
     private:
         Deck deck;
         vector<Card> crib;
+        Player player1;
+        Player player2;
     public:
         
         Game();

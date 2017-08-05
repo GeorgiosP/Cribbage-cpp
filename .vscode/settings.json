@@ -40,6 +40,14 @@
         "tuple": "cpp",
         "xmemory": "cpp",
         "xtree": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "ctime": "cpp",
+        "iterator": "cpp",
+        "locale": "cpp",
+        "regex": "cpp",
+        "xlocbuf": "cpp",
+        "xlocmes": "cpp",
+        "xlocmon": "cpp",
+        "xloctime": "cpp"
     }
 }
