@@ -18,6 +18,7 @@ class Player
     public:
         Player();
         Player(string m_name) : name(m_name) {};
+        void award_points(int points);
 };
 
 #endif

@@ -14,6 +14,11 @@ using namespace std;
 class Game
 {
     private:
+        struct Crib 
+        {
+            Player player;
+            
+        };
         Deck deck;
         vector<Card> crib;
         Player player1;
