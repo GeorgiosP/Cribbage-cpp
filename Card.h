@@ -20,6 +20,7 @@ class Card
     public:
         int value;
         Suit suit;
+        Card();
         Card(int m_value, Suit m_suit) : value(m_value), suit(m_suit) {};
         void Display();
         void DisplayASCII();

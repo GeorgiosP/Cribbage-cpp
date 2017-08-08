@@ -12,7 +12,6 @@ class Player
 {   
     private:
         vector<Card> m_hand;
-        vector<Card> m_crib;
         string m_name;
         int m_points = 0;
         bool m_is_dealer = false;

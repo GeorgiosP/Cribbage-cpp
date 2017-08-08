@@ -4,9 +4,7 @@ Deck::Deck()
 {
     srand(time(NULL));
 
-    for (size_t i = 0; i < 52; i++)
-        cards.push_back(Card((i/4)+1, Suit(i%4)));    
-        
+    Populate();    
     Order();
 }
 
@@ -55,21 +53,44 @@ void Deck::Shuffle()
         std::swap(cards[i], cards[RandomCard()]);
 }
 
+void Deck::Populate()
+{
+    for (size_t i = 0; i < 52; i++)
+        cards.push_back(Card((i/4)+1, Suit(i%4)));   
+}
+
+void Deck::Regenerate()
+{
+    cards.clear();
+    Populate();
+    Order();
+}
+
 size_t Deck::RandomCard()
 {
     return (rand() % (cards.size() -1));
 }
 
+
+// cuts the deck, also removes the cut card...
 Card Deck::CutDeck()
 {
-    return cards[RandomCard()];
+    int random_location = RandomCard();
+    Card card_cpy = cards[random_location];
+    cards.erase(cards.begin() + random_location);
+    return card_cpy;
 }
 
-// will return the nth card unless out of bounds, it will get the last card
+// will return the nth card unless out of bounds, it will get the last card, it also deleted the card you get from the deck
 Card Deck::Get(int index)
 {
+    Card card_cpy;
     if (index > 52 || index < 0)
-        return cards[51];
+        card_cpy = cards[51];
 
-    return cards[index];
+    card_cpy = cards[index];
+
+    cards.erase(cards.begin() + index);
+
+    return card_cpy;
 }

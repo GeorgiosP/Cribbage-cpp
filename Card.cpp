@@ -1,5 +1,7 @@
 #include "Card.h"
 
+Card::Card() {}
+
 int Card::GetValue()
 {
     return value;
