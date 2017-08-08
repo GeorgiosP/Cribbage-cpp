@@ -1,6 +1,7 @@
 #include "scoring.h"
 
-int score(vector<Card> cards)
+int score(Card cards[])
 {
     return 0;
 }
+
