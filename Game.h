@@ -17,12 +17,13 @@ class Game
         struct Crib 
         {
             Player player;
-            
+            Card cards[4];
         };
         Deck deck;
         vector<Card> crib;
         Player player1;
         Player player2;
+        Crib crib;
     public:
         
         Game();
