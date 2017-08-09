@@ -8,6 +8,6 @@ using namespace std;
 
 // this file is for utility only... no classes
 
-int score(vector<Card> cards);
+int score(Card cards[]);
 
 #endif
