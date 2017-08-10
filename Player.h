@@ -12,11 +12,11 @@ class Player
 {   
     private:
         vector<Card> m_hand;
-        string m_name;
         int m_points = 0;
         bool m_is_dealer = false;
         bool m_has_won = false;
     public:
+        string m_name;
         Player();
         Player(string name) : m_name(name) {};
         void award_points(int points);

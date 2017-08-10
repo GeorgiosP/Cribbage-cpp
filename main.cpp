@@ -56,7 +56,8 @@ bool print_play_menu(string input)
     }
     else if (input == "play")
     {
-        Game game = *new Game();
+        Game game = Game();
+        
         game.Start();
     }
     else if (input == "exit")

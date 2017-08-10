@@ -20,13 +20,16 @@ struct Crib
 class Game
 {
     private:
-        Deck deck;
-        Player player1;
-        Player player2;
+        Deck* deck;
+        Player* player1;
+        Player* player2;
         Crib crib;
     public:
         
         Game();
         void Start();
+        void setName();
+        void pickDealer();
+        
 };
 #endif
