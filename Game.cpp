@@ -10,6 +10,7 @@ void Game::Start()
 
 Game::Game()
 {
+<<<<<<< HEAD
     deck = new Deck();
     deck->Shuffle();
     player1 = new Player();
@@ -67,4 +68,7 @@ void Game::setName()
         }
 
     }
+=======
+    deck.Shuffle();
+>>>>>>> e2ef478c92f52d619098a34c26b965a3a9d04d4d
 }

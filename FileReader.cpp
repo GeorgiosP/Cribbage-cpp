@@ -27,5 +27,7 @@ std::string FileReader::ReadFileWithReplace(const char* _path, std::map<char, ch
     std::replace(result.begin(), result.end(), 'X', '4');
     std::replace(result.begin(), result.end(), 'Y', 'S');
 
+    delete _path;
+
     return result;
 }

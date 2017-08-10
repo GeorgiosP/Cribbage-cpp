@@ -9,6 +9,7 @@
 #include "Deck.h"
 #include "Card.h"
 #include "Game.h"
+#include "scoring.h"
 
 using namespace std;
 
@@ -18,8 +19,16 @@ Deck deck;
 
 int main()
 {
-    deck = *new Deck();
     string input;
+    deck.Shuffle();
+    Card cards[5] = {deck.Get(0), deck.Get(1), deck.Get(2), deck.Get(3), deck.Get(4)};
+    for (size_t i = 0; i < sizeof(cards)/sizeof(Card); i++)
+    {
+        cards[i].Display();
+    }
+
+    cout << "Points: " << score(cards, sizeof(cards)/sizeof(Card)) << "\n\n";
+
     while(print_play_menu(input)) {
         
     } // menu loop
@@ -56,8 +65,12 @@ bool print_play_menu(string input)
     }
     else if (input == "play")
     {
+<<<<<<< HEAD
         Game game = Game();
         
+=======
+        Game game;
+>>>>>>> e2ef478c92f52d619098a34c26b965a3a9d04d4d
         game.Start();
     }
     else if (input == "exit")
