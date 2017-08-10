@@ -65,8 +65,7 @@ bool print_play_menu(string input)
     }
     else if (input == "play")
     {
-    
-        
+
         Game game;
         game.Start();
     }
