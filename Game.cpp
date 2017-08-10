@@ -10,7 +10,6 @@ void Game::Start()
 
 Game::Game()
 {
-<<<<<<< HEAD
     deck = new Deck();
     deck->Shuffle();
     player1 = new Player();
@@ -54,8 +53,9 @@ void Game::setName()
 {
     for(int i = 1; i < 3; i++)
     {
+        string playerDefault = "player";
     
-        cout << "Hello! lets start with your name: ";
+        cout << "Hello! " << playerDefault.append(to_string(i)) << " lets start with your name: ";
         if(i == 1)
         {
             getline(cin, player1->m_name);
@@ -68,7 +68,5 @@ void Game::setName()
         }
 
     }
-=======
-    deck.Shuffle();
->>>>>>> e2ef478c92f52d619098a34c26b965a3a9d04d4d
+    deck->Shuffle();
 }
