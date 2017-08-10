@@ -19,7 +19,6 @@ Deck deck;
 
 int main()
 {
-    deck = *new Deck();
     string input;
     deck.Shuffle();
     Card cards[5] = {deck.Get(0), deck.Get(1), deck.Get(2), deck.Get(3), deck.Get(4)};
@@ -66,7 +65,7 @@ bool print_play_menu(string input)
     }
     else if (input == "play")
     {
-        Game game = *new Game();
+        Game game;
         game.Start();
     }
     else if (input == "exit")
