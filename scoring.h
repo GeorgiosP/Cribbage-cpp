@@ -9,12 +9,18 @@ using namespace std;
 
 // this file is for utility only... no classes
 
-int score(Card cards[], size_t size);
-int score_pairs(Card cards[], size_t size);
-int score_flush(Card cards[], size_t size);
-int score_runs(Card cards[], size_t size);
-int score_fifteens(Card cards[], size_t size);
-int score_thirtyone(Card cards[], size_t size);;
-int score_pairs(Card cards[], size_t size);
+struct Set 
+{
+    int set[];
+    int number;
+};
+
+int score(vector<Card> cards);
+int score_pairs(vector<Card> cards);
+int score_flush(vector<Card> cards);
+int score_runs(vector<Card> cards);
+int score_fifteens(vector<Card> cards);
+int score_thirtyone(vector<Card> cards);;
+int score_pairs(vector<Card> cards);
 
 #endif

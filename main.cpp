@@ -21,13 +21,29 @@ int main()
 {
     string input;
     deck.Shuffle();
-    Card cards[5] = {deck.Get(0), deck.Get(1), deck.Get(2), deck.Get(3), deck.Get(4)};
-    for (size_t i = 0; i < sizeof(cards)/sizeof(Card); i++)
+    vector<Card> cards;
+
+    cards.push_back(deck.Get(0));
+    cards.push_back(deck.Get(0));
+    cards.push_back(deck.Get(0));
+    cards.push_back(deck.Get(0));
+    cards.push_back(deck.Get(0));
+    cards.push_back(deck.Get(0));
+
+    sort(cards.begin(), cards.end(), [](const Card& lhs, const Card& rhs)
+    { 
+         return lhs.value < rhs.value;
+    });
+
+
+    for (size_t i = 0; i < cards.size(); i++)
     {
         cards[i].Display();
     }
 
-    cout << "Points: " << score(cards, sizeof(cards)/sizeof(Card)) << "\n\n";
+    cout << "\n";
+
+    cout << "Points: " << score(cards) << "\n\n";
 
     while(print_play_menu(input)) {
         

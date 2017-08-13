@@ -81,7 +81,7 @@ Card Deck::CutDeck()
     return card_cpy;
 }
 
-// will return the nth card unless out of bounds, it will get the last card, it also deleted the card you get from the deck
+// will return the nth card unless out of bounds, it will get the last card, the card indexed will also be delted
 Card Deck::Get(int index)
 {
     Card card_cpy;
