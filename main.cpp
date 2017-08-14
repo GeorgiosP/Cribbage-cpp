@@ -1,3 +1,10 @@
+// Raymond Dinkin & George Psarakis : Github:: https://github.com/GeorgiosP/Cribbage-cpp
+// Instructions: 
+    //1. cd /my/directory 
+    //2. sudo apt-get install make || to install make if you don't have it
+    //3. make || compiles the files
+    //4. ./a.out || run's the binary
+
 #ifndef MAIN
 #define MAIN
 
@@ -20,30 +27,6 @@ Deck deck;
 int main()
 {
     string input;
-    deck.Shuffle();
-    vector<Card> cards;
-
-    cards.push_back(deck.Get(0));
-    cards.push_back(deck.Get(0));
-    cards.push_back(deck.Get(0));
-    cards.push_back(deck.Get(0));
-    cards.push_back(deck.Get(0));
-    cards.push_back(deck.Get(0));
-
-    sort(cards.begin(), cards.end(), [](const Card& lhs, const Card& rhs)
-    { 
-         return lhs.value < rhs.value;
-    });
-
-
-    for (size_t i = 0; i < cards.size(); i++)
-    {
-        cards[i].Display();
-    }
-
-    cout << "\n";
-
-    cout << "Points: " << score(cards) << "\n\n";
 
     while(print_play_menu(input)) {
         

@@ -11,7 +11,6 @@ using namespace std;
 class Player
 {   
     private:
-        vector<Card> m_hand;
         int m_points = 0;
         bool m_is_dealer = false;
         bool m_has_won = false;
@@ -19,6 +18,7 @@ class Player
         string m_name;
         Player();
         Player(string name) : m_name(name) {};
+        vector<Card> m_hand;
         void award_points(int points);
         void set_dealer(bool is_dealer);
         bool is_dealer();
